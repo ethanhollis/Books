@@ -20,7 +20,8 @@ namespace Books.Migrations
                     AuthorMiddle = table.Column<string>(nullable: true),
                     Publisher = table.Column<string>(nullable: true),
                     Classification = table.Column<string>(nullable: true),
-                    Category = table.Column<string>(nullable: true)
+                    Category = table.Column<string>(nullable: true),
+                    Pages = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

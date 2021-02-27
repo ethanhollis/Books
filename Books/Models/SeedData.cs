@@ -32,7 +32,8 @@ namespace Books.Models
                         ISBN = "978-045149439",
                         Classification = "Fiction",
                         Category = "Classic",
-                        Price = 9.95
+                        Price = 9.95,
+                        Pages = 1488
 
                     },
                     new Book
@@ -45,9 +46,72 @@ namespace Books.Models
                         ISBN = "978-0553384611",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 21.54
+                        Price = 21.54,
+                        Pages = 832
+
+
+                    }, 
+                    new Book
+                    {
+                        BookTitle = "Unbroken",
+                        AuthorFirst = "Laura",
+                        AuthorMiddle = "",
+                        AuthorLast = "Hillenbrand",
+                        Publisher = "Random House",
+                        ISBN = "978-0812974492",
+                        Classification = "Non-Fiction",
+                        Category = "Historical",
+                        Price = 13.33,
+                        Pages = 528
+
+
+                    },
+                    new Book
+                    {
+                        BookTitle = "The Push",
+                        AuthorFirst = "Tommy",
+                        AuthorMiddle = "",
+                        AuthorLast = "Caldwell",
+                        Publisher = "Penguin",
+                        ISBN = "978-0399562716",
+                        Classification = "Non-Fiction",
+                        Category = "Memoir",
+                        Price = 17.00,
+                        Pages = 337
+
+
+                    },
+
+                    new Book
+                    {
+                        BookTitle = "The Virgin Way",
+                        AuthorFirst = "Richard",
+                        AuthorMiddle = "",
+                        AuthorLast = "Branson",
+                        Publisher = "Portfolio",
+                        ISBN = "978-1591847984",
+                        Classification = "Non-Fiction",
+                        Category = "Business",
+                        Price = 29.16,
+                        Pages = 400
+
+                    },
+                    new Book
+                    {
+                        BookTitle = "Team of Rivals",
+                        AuthorFirst = "Doris",
+                        AuthorMiddle = "Kearns",
+                        AuthorLast = "Goodwin",
+                        Publisher = "Simon & Schuster",
+                        ISBN = "978-0743270755",
+                        Classification = "Non-Fiction",
+                        Category = "Biography",
+                        Price = 14.58,
+                        Pages = 944
+
 
                     }
+
                     );
                 context.SaveChanges();
             }

@@ -42,6 +42,9 @@ namespace Books.Migrations
                     b.Property<string>("ISBN")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("Pages")
+                        .HasColumnType("INTEGER");
+
                     b.Property<double>("Price")
                         .HasColumnType("REAL");
 
