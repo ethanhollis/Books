@@ -23,11 +23,13 @@ namespace Books.Controllers
             _repository = repository;
         }
 
-        public IActionResult Index(int page = 1)
+        //This is the controller -- routes are set in startup for the possible parameters
+        public IActionResult Index(string category, int page = 1)
         {
             return View(new Books.Models.ViewModels.BookListViewModel
             {
                 Books = _repository.Books
+                    .Where(p => category == null || p.Category == category)
                     .OrderBy(p => p.BookId)
                     .Skip((page - 1) * ItemsPerPage)
                     .Take(ItemsPerPage),
@@ -36,8 +38,10 @@ namespace Books.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = ItemsPerPage,
-                    TotalItems = _repository.Books.Count()
-                }
+                    TotalItems = category == null ? _repository.Books.Count() :
+                                    _repository.Books.Where(x => x.Category == category).Count()
+                },
+                CurrentCategory = category
             }) ;
                 
 

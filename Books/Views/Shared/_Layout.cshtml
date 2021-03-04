@@ -8,8 +8,29 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <header>
+        <h1 class="text-center">Books</h1>
+        <br /><br />
+    </header>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Categories:</h4>
+                    <div class="card-text">
+                        <vc:nav-menu />
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
