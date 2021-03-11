@@ -13,5 +13,10 @@
     <td>@Model.Pages</td>
     <td>@Model.Classification</td>
     <td>@Model.Category</td>
-    <td>$@Model.Price</td>
+    <td>@Model.Price.ToString("c")</td>
+    <td><form id="@Model.BookId" asp-page="/Cart" method="post">
+            <input type="hidden" asp-for="@Model.BookId" />
+            <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+            <button type="submit" class="btn-success btn-sm">Add To Cart</button>
+        </form></td>
 </tr>
